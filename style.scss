@@ -17,6 +17,9 @@
     background-color: greenyellow;
     color: black;
     z-index: 999;
+    @media(max-width:768px){
+        display: none;
+    }
   }
   .showNotification {
     right: 5%;
@@ -159,10 +162,18 @@ form{
     margin: 0 auto;
     padding: 2rem;
     border: 2px solid greenyellow;
+    @media(max-width:768px){
+        width: 100%;
+        padding: .50rem;
+    }
     input{
         width: 100%;
         padding: .5rem;
         font-size: 1.20rem;
+        @media(max-width:768px){
+            padding: .50rem;
+            font-size: 1rem;
+        }
     }
     button{
         cursor: pointer;
@@ -172,17 +183,26 @@ form{
     }
     textarea{
         width: 100%;
+
     }
     .form-header{
         display: flex;
         justify-content: space-between;
         font-size: 1.50rem;
+        @media(max-width:768px){
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
     }
     .input-data{
         display: flex;
         flex-direction: column;
         gap: 1rem;
         margin-top: 2rem;
+        @media(max-width:768px){
+            margin-top: .50rem;
+        }
         p{
             font-size: 1.10rem;
             font-weight: bold;
@@ -194,6 +214,9 @@ form{
          font-size: 1.10rem;
          background-color: green;
          color: white;
+         @media(max-width:768px){
+            font-size: 1rem;
+         }
         }
     }
 }
