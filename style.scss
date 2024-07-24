@@ -26,8 +26,15 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    @media(max-width:768px){
+        width: 100%;
+        padding: 1rem;
+    }
     p{
         font-size: 1.50rem;
+        @media(max-width:768px){
+            font-size: 1rem;
+        }
     }
     button{
         cursor: pointer;
@@ -39,18 +46,39 @@
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
+        @media(max-width:768px){
+            display: flex;
+            gap: 1rem;
+        }
         p{
             font-size: 2rem;
             font-weight: bold;
+            @media(max-width:768px){
+                font-size: 1.50rem;
+            }
         }
         input{
             width: 80%;
             padding: .50rem;
             outline: none;
+            @media(max-width:768px){
+                width: 100%;
+                padding: .40rem;
+            }
         }
         .btns{
             display: flex;
             gap: 1rem;
+            @media(max-width:768px){
+                display: flex;
+                flex-direction: column;
+                gap: .50rem;
+            }
+            .cart{
+                @media(max-width:768px){
+                    padding: .2rem 1rem;
+                }  
+            }
             button{
                 padding: .2rem 1rem;
                 border: none;
@@ -59,6 +87,9 @@
                 font-size: 16px;
                 border-radius: 5px;
                 cursor: pointer;
+                @media(max-width:768px){
+                    padding: .2rem .85rem;
+                }
             }
             
         }
@@ -67,15 +98,35 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 5rem;
+    @media(max-width:768px){
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem; 
+        margin-top: 2rem;
+    }
     .card{
         margin-top: 5rem;
         width: 90%;
         padding: 1rem;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+        @media(max-width:768px){
+            margin-top: 1rem;
+            margin: 0 auto;
+        }
         .products{
             .image{
                 display: flex;
                 align-items: center;
+                @media(max-width:768px){
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;   
+                }
+                img{
+                    @media(max-width:768px){
+                        width: 50%;
+                    }
+                }
+                
             }
             .description{
                 display: flex;
@@ -95,6 +146,9 @@
             .button{
                 font-size: 1.20rem;
                 width: 100%;
+                @media(max-width:768px){
+                    font-size: 1rem;
+                }
               }
         }
        }

@@ -29,8 +29,19 @@
   margin: 0 auto;
   padding: 2rem;
 }
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+}
 .container p {
   font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .container p {
+    font-size: 1rem;
+  }
 }
 .container button {
   cursor: pointer;
@@ -43,18 +54,47 @@
   align-items: center;
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  .container .header {
+    display: flex;
+    gap: 1rem;
+  }
+}
 .container .header p {
   font-size: 2rem;
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .container .header p {
+    font-size: 1.5rem;
+  }
 }
 .container .header input {
   width: 80%;
   padding: 0.5rem;
   outline: none;
 }
+@media (max-width: 768px) {
+  .container .header input {
+    width: 100%;
+    padding: 0.4rem;
+  }
+}
 .container .header .btns {
   display: flex;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .container .header .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .container .header .btns .cart {
+    padding: 0.2rem 1rem;
+  }
 }
 .container .header .btns button {
   padding: 0.2rem 1rem;
@@ -65,10 +105,22 @@
   border-radius: 5px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .container .header .btns button {
+    padding: 0.2rem 0.85rem;
+  }
+}
 .container .main-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 5rem;
+}
+@media (max-width: 768px) {
+  .container .main-card {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
 }
 .container .main-card .card {
   margin-top: 5rem;
@@ -76,9 +128,27 @@
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
+@media (max-width: 768px) {
+  .container .main-card .card {
+    margin-top: 1rem;
+    margin: 0 auto;
+  }
+}
 .container .main-card .card .products .image {
   display: flex;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .container .main-card .card .products .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .container .main-card .card .products .image img {
+    width: 50%;
+  }
 }
 .container .main-card .card .products .description {
   display: flex;
@@ -98,6 +168,11 @@
 .container .main-card .card .products .button {
   font-size: 1.2rem;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .container .main-card .card .products .button {
+    font-size: 1rem;
+  }
 }
 
 form {
