@@ -1,4 +1,3 @@
-const productForm=document.getElementById("productForm")
 const title=document.getElementById("title")
 const ImageLink=document.getElementById("ImageLink")
 const Price=document.getElementById("Price")
@@ -45,6 +44,7 @@ productForm.addEventListener("submit",function(e){
   // Fire a notification
   showNotification("Product Created successfully");
   // Route the Home Page
+  renderProducts(products)
   setTimeout(() => {
     window.location.href = "/";
   }, 4000);
@@ -53,11 +53,12 @@ function generateSlug(title) {
     const slug = title.trim().toLowerCase().split(" ").join("-");
     return slug;
   }
-  function showNotification(message) {
+function showNotification(message) {
     notification.innerHTML = `<p>${message}</p>`;
     notification.classList.add("showNotification");
     setTimeout(() => {
       notification.classList.remove("showNotification");
     }, 3000);
   }
-  
+
+
